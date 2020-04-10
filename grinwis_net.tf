@@ -16,6 +16,6 @@ resource "akamai_dns_record" "www_grinwis_net" {
   recordtype = "CNAME"
   active     = true
   ttl        = 600
-  target     = ["www.grinwis.com.akamaized.net"]
+  target     = ["www.grinwis.net.akamaized.net"]
   depends_on = [akamai_dns_zone.grinwis_net]
 }
