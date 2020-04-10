@@ -10,12 +10,12 @@ resource "akamai_dns_zone" "grinwis_net" {
 }
 
 # special AKAMAICDN DNS record to point to delivery configuration for zone apex mapping
-resource "akamai_dns_record" "www_grinwis_com" {
-  zone       = "grinwis.com"
-  name       = "www.grinwis.com"
+resource "akamai_dns_record" "www_grinwis_net" {
+  zone       = "grinwis.net"
+  name       = "www.grinwis.net"
   recordtype = "CNAME"
   active     = true
-  ttl        = 20
+  ttl        = 600
   target     = ["www.grinwis.com.akamaized.net"]
   depends_on = [akamai_dns_zone.grinwis_net]
 }
