@@ -9,5 +9,5 @@ data "akamai_contract" "default" {
 
 # select specific group, needed as argument when creating a zone
 data "akamai_group" "default" {
-  #name = "GSS Training"
+  #name = "GSS Training Internal-C-1IE2OHM"
 }
